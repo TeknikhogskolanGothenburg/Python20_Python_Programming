@@ -1,0 +1,31 @@
+Hitta ett ord som skall användas
+
+Skriv ut ett underscore för varje bokstav i ordet
+
+Bestäm att man har 8 liv
+
+Så länge spelaren har liv kvar, upprepa:
+
+    Gissa en bokstav
+
+    Kolla hur många gånger bokstaven förekommer i ordet genom att gå igenom ordet bokstav för bokstav
+        Om bokstaven är samma som spelaren gissat
+            Byt ut det underscore som visas mot rätt bokstav på den här platsen
+
+    Om man inte har bytt ut något underscore
+        Då förlorar man ett liv
+
+    Om man har gissat alla bokstäver rätt, avsluta spelet och spelaren har vunnit
+
+    Skriv ut rätt gissade bokstäver och kvarvarande underscore
+    Skriv ut hur många liv man har kvar
+    Skriv ut bokstäver man redan har använt
+
+
+
+_ P P _ _
+
+_ P P _ E
+
+
+
