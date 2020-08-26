@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     words = ["apple", "duplex", "banjo", "bookworm", "beekeeper"]
     word = random.choice(words)
