@@ -1,5 +1,8 @@
+import random
+
 def main():
-    word = "apple"
+    words = ["apple", "duplex", "banjo", "bookworm", "beekeeper"]
+    word = random.choice(words)
     hidden_word = "_ " * len(word)
     print(hidden_word)
     lives = 8
