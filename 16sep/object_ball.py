@@ -41,7 +41,7 @@ def main():
     colors = [WHITE, RED, GREEN, BLUE]
 
     balls = []
-    for _ in range(10000):
+    for _ in range(2):
         x = random.randrange(10, SCREEN_WIDTH-10)
         y = random.randrange(10, SCREEN_HEIGHT-10)
         x_step = random.choice([-3, -2, -1, 1, 2, 3])
