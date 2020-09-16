@@ -1,14 +1,7 @@
 import pygame
 import random
+from settings import *
 
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
-
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
 
 class Ball:
     def __init__(self, x, y, x_step, y_step, color, radius, screen):
@@ -33,6 +26,8 @@ class Ball:
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.x, self.y), self.radius)
 
+    def show_next_hit(self):
+        pass
 
 def main():
     pygame.init()
@@ -41,13 +36,13 @@ def main():
     colors = [WHITE, RED, GREEN, BLUE]
 
     balls = []
-    for _ in range(2):
-        x = random.randrange(10, SCREEN_WIDTH-10)
-        y = random.randrange(10, SCREEN_HEIGHT-10)
+    for _ in range(20):
+        x = random.randrange(MAX_RADIUS, SCREEN_WIDTH-MAX_RADIUS)
+        y = random.randrange(MAX_RADIUS, SCREEN_HEIGHT-MAX_RADIUS)
         x_step = random.choice([-3, -2, -1, 1, 2, 3])
         y_step = random.choice([-3, -2, -1, 1, 2, 3])
         color = random.choice(colors)
-        radius = random.randrange(5, 20)
+        radius = random.randrange(5, MAX_RADIUS)
         ball = Ball(x, y, x_step, y_step, color, radius, screen)
         balls.append(ball)
 

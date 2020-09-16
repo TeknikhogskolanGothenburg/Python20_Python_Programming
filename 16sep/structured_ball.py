@@ -31,7 +31,7 @@ def main():
 
         screen.fill(BLACK)
         pygame.draw.circle(screen, RED, (x1, y1), 10)
-        pygame.draw.circle(screen, GREEN, (x2, y2), 10)
+        pygame.draw.circle(screen, GREEN, (x2, y2), 10, 2)
 
         pygame.display.update()
         y1 += y_step1
