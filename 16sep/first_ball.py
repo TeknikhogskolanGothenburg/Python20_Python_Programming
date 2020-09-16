@@ -14,8 +14,10 @@ def main():
     screen = pygame.display.set_mode((800, 600))
 
     running = True
+    x = 400
+    x_step = -2
     y = 300
-
+    y_step = 2
     clock = pygame.time.Clock()
     while running:
         for event in pygame.event.get():
@@ -23,10 +25,18 @@ def main():
                 running = False
 
         screen.fill(BLACK)
-        pygame.draw.circle(screen, RED, (400, y), 10)
+        pygame.draw.circle(screen, RED, (x, y), 10)
 
         pygame.display.update()
-        y += 2
+        y += y_step
+
+        if not 10 <= y <= 590:
+            y_step *= -1
+
+        x += x_step
+        if not 10 <= x <= 790:
+            x_step *= -1
+
         clock.tick(FPS)
 
 if __name__ == '__main__':
