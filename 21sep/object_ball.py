@@ -109,7 +109,7 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     ball = Ball(200, 500, -1, 1, RED, 20, screen)
-    blue_rect = Rect(SCREEN_WIDTH//2-50, SCREEN_HEIGHT//2 - 50, 100, 100, BLUE, screen)
+    blue_rect = Rect(SCREEN_WIDTH//2-50, SCREEN_HEIGHT//2 - 50, 100, 20, BLUE, screen)
     running = True
     clock = pygame.time.Clock()
 
@@ -135,6 +135,9 @@ def main():
                 ball.y_step = -1
             if blue_rect.bottom >= ball.top >= blue_rect.bottom - 10:
                 ball.y_step = 1
+
+            # if som kollar om bollens mittpunkt är inne i rutan
+            #    flytta bollen i nuvarande x_step och y_step tills bollen är ute ur rutan
 
 
         # ball.show_next_hit()
