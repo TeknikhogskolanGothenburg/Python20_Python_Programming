@@ -2,7 +2,10 @@
 # 0 1 2 3 4 5 6 7  8
 import time
 
-@time_it
+def momize(f):
+
+
+
 def recur_fibo(n, mem={}):
     if n <= 1:
         return n
@@ -19,7 +22,7 @@ def recur_fibo(n, mem={}):
             mem[n-2] = n2
         return n1 + n2
 
-@time_it
+@memoize
 def recur_fibo2(n):
     if n <= 1:
         return n
