@@ -39,7 +39,7 @@ def main():
     height = float(height)
     marker_style = dict(color='lavender', marker="X", markersize=10)
 
-    _, ax = pyplot.subplot()
+    _, ax = pyplot.subplots()
 
     ax.scatter(data_female.Weight, data_female.Height, c=data_female.Color)
     ax.scatter(data_male.Weight, data_male.Height, c=data_male.Color)
